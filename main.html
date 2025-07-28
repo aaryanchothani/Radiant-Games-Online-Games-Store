@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiant Games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body id="body">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+        </div>
+        <div class="center-nav">
+            <ul>
+                <li><a href="main.html" class="active-nav">HOME</a></li>
+                <li><a href="../about/about.html">ABOUT</a></li>
+                <li><a  onclick="scrolls()" id="browse">BROWSE</a></li>
+            </ul>
+        </div>
+        <div class="end-nav">
+            <ul>
+                <li><a href="#" class="login-btn" onclick="logButton()">LOGIN</a></li>
+                <li><a href="#" class="signup-btn" onclick="signup()">SIGNUP</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- -----------------front video carousel begins here---------- -->
+        <div class="front-class">
+            <div class="frames">
+
+                <div class="frame" id="framesss" data-index="0" data-status="active">
+                    <button class="left-btn fa-solid fa-less-than" onclick="handleLeftClick()"></button>
+                    <video autoplay muted loop src="videos/godofwar.mp4" type="video/mp4"></video>
+                    <button class="right-btn fa-solid fa-greater-than" onclick="handleRightClick()"></button>
+                    <div class="game-info-parent">
+                        <div class="game-name">God of War: Ragnarok</div>
+                        <div class="game-info"><i class="fa-solid fa-indian-rupee-sign"></i> 4,299
+                            <i class="circle fa-solid fa-circle"></i>
+                            UA
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <div class="frame" id="framesss" data-index="1" data-status="unknown">
+                    <button class="left-btn fa-solid fa-less-than" onclick="handleLeftClick()"></button>
+                    <video autoplay muted loop src="videos/modernwarfare.mp4" type="video/mp4"></video>
+                    <button class="right-btn fa-solid fa-greater-than" onclick="handleRightClick()"></button>
+                    <div class="game-info-parent">
+                        <div class="game-name">Call of Duty: Modern Warfare II</div>
+                        <div class="game-info"><i class="fa-solid fa-indian-rupee-sign"></i> 2,999
+                            <i class="circle fa-solid fa-circle"></i>
+                            UA
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="frame" id="framesss" data-index="2" data-status="unknown">
+                    <button class="left-btn fa-solid fa-less-than" onclick="handleLeftClick()"></button>
+                    <video autoplay muted loop src="videos/fifa23.mp4" type="video/mp4"></video>
+                    <button class="right-btn fa-solid fa-greater-than" onclick="handleRightClick()"></button>
+                    <div class="game-info-parent">
+                        <div class="game-name">FIFA 23</div>
+                        <div class="game-info"><i class="fa-solid fa-indian-rupee-sign"></i> 2,299
+                            <i class="circle fa-solid fa-circle"></i>
+                            UA
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="frame" id="framesss" data-index="3" data-status="unknown">
+                    <button class="left-btn fa-solid fa-less-than" onclick="handleLeftClick()"></button>
+                    <video autoplay muted loop src="videos/stray.mp4" type="video/mp4"></video>
+                    <button class="right-btn fa-solid fa-greater-than" onclick="handleRightClick()"></button>
+                    <div class="game-info-parent">
+                        <div class="game-name">Stray</div>
+                        <div class="game-info"><i class="fa-solid fa-indian-rupee-sign"></i> 3,999
+                            <i class="circle fa-solid fa-circle"></i>
+                            UA
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- <div class="frame" id="framesss" data-index="1" data-status="unknown">
+                    <button class="left-btn fa-solid fa-less-than" onclick="handleLeftClick()"></button>
+                    <video autoplay muted loop src="videos/ac-valhalla.mp4" type="video/mp4"></video>
+                    <button class="right-btn fa-solid fa-greater-than" onclick="handleRightClick()"></button>
+                    <div class="game-info-parent">
+                        <div class="game-name">Assassin's Creed Valhalla</div>
+                        <div class="game-info"><i class="fa-solid fa-indian-rupee-sign"></i> 3,999
+                            <i class="circle fa-solid fa-circle"></i>
+                            UA
+                        </div>
+                    </div>
+
+                </div> -->
+            </div>
+
+        </div>
+        <!-- -------front video carousel ends here----- -->
+
+        <div class="category-buttons">
+            <button class="btn btn1 active" id="All"> <span class="abc">Featured</span> </button>
+            <button class="btn btn2" id="Adventure">Adventure</button>
+            <button class="btn btn3" id="Action">Action</button>
+            <button class="btn btn4" id="Sports">Sports</button>
+        </div>
+
+        <div class="category-content">
+            <div class="card Adventure All">
+                <div class="card-image">
+                    <img src="images/residentevil4.png" alt="">
+                </div>
+                <div class="category">ADVENTURE</div>
+                <div class="name">Resident Evil 4</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 4,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card All Action">
+                <div class="card-image">
+                    <img src="images/godofwarragnarok.png" alt="">
+                </div>
+                <div class="category">ACTION</div>
+                <div class="name">God of War Ragnarok</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 4,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Action All">
+                <div class="card-image">
+                    <img src="images/uncharted4.png" alt="">
+                </div>
+                <div class="category">ACTION</div>
+                <div class="name">Uncharted 4</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 4,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Action All">
+                <div class="card-image">
+                    <img src="images/eldenring.png" alt="">
+                </div>
+                <div class="category">ACTION</div>
+                <div class="name"> Elden Ring</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 4,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Action All">
+                <div class="card-image">
+                    <img src="images/codmw2.png" alt="">
+                </div>
+                <div class="category">ACTION</div>
+                <div class="name">Call of Duty Modern Warfare II</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 4,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Action All">
+                <div class="card-image">
+                    <img src="images/witcher3.png" alt="">
+                </div>
+                <div class="category">ACTION</div>
+                <div class="name">The Witcher 3: Wild Hunt</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 4,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Adventure All">
+                <div class="card-image">
+                    <img src="images/cyberpunk.png" alt="">
+                </div>
+                <div class="category">ADVENTURE</div>
+                <div class="name">Cyberpunk 2077</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 4,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Adventure All">
+                <div class="card-image">
+                    <img src="images/milesmorales.png" alt="">
+                </div>
+                <div class="category">ADVENTURE</div>
+                <div class="name">Spiderman Miles Morales</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 4,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Action All">
+                <div class="card-image">
+                    <img src="images/ghosttsushima.png" alt="">
+                </div>
+                <div class="category">ACTION</div>
+                <div class="name">Ghost of Tsushima</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 4,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Sports">
+                <div class="card-image">
+                    <img src="images/fifa23.png" alt="">
+                </div>
+                <div class="category">SPORTS</div>
+                <div class="name">FIFA 23</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 2,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Sports">
+                <div class="card-image">
+                    <img src="images/rocketleague.png" alt="">
+                </div>
+                <div class="category">SPORTS</div>
+                <div class="name">Rocket League</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 2,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Action">
+                <div class="card-image">
+                    <img src="images/cod-warzone.png" alt="">
+                </div>
+                <div class="category">ACTION</div>
+                <div class="name">CALL OF DUTY - WARZONE</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 3,999</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Adventure">
+                <div class="card-image">
+                    <img src="images/thelastofus.png" alt="">
+                </div>
+                <div class="category">ADVENTURE</div>
+                <div class="name">THE LAST OF US PART II</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 3,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Adventure">
+                <div class="card-image">
+                    <img src="images/bioshock.png" alt="">
+                </div>
+                <div class="category">ADVENTURE</div>
+                <div class="name">Bioshock Infinite</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 3,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Adventure">
+                <div class="card-image">
+                    <img src="images/stray.png" alt="">
+                </div>
+                <div class="category">ADVENTURE</div>
+                <div class="name">Stray</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 3,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Adventure">
+                <div class="card-image">
+                    <img src="images/starwars.png" alt="">
+                </div>
+                <div class="category">ADVENTURE</div>
+                <div class="name">Star Wars: The Fallen Jedi</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 3,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Adventure">
+                <div class="card-image">
+                    <img src="images/hogwarts.png" alt="">
+                </div>
+                <div class="category">ADVENTURE</div>
+                <div class="name">Hogwarts Legacy</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 3,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Adventure">
+                <div class="card-image">
+                    <img src="images/untildawn.png" alt="">
+                </div>
+                <div class="category">ADVENTURE</div>
+                <div class="name">Until Dawn</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 3,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Adventure">
+                <div class="card-image">
+                    <img src="images/fallout4.png" alt="">
+                </div>
+                <div class="category">ADVENTURE</div>
+                <div class="name">Fallout 4</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 3,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            <div class="card Adventure">
+                <div class="card-image">
+                    <img src="images/acvalhalla.png" alt="">
+                </div>
+                <div class="category">ADVENTURE</div>
+                <div class="name">Assassin's Creed Valhalla</div>
+                <div class="flex-box">
+                    <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 3,799</div>
+                    <div class="buy-btn"><button>ADD</button></div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="upper-foot">
+                <div class="foot-logo">
+                    <img src="logo.png" alt="">
+                    <div class="foot-socials">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="foot-company">
+                    <span>COMPANY</span>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="foot-account">
+                    <span>ACCOUNT</span>
+                    <ul>
+                        <li><a href="#">Login/Signup</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="contact-links">
+                    <span>CONTACT US</span>
+                    <ul>
+                        <li><a href="#"><i class="fa-sharp fa-solid fa-envelope"></i> info@radiant.com</a></li>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i> 220-5500-5500</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lower-foot">
+                Copyright 2023 Radiant Games, Inc.
+            </div>
+        </div>
+    </footer>
+
+    <div class="panel">
+        <div class="close-box">
+            <i class="fa-regular fa-x" onclick="xButton()"></i>
+        </div>
+        <div class="panel-box">
+            <div class="login-sect">
+                <div class="login-left">
+                    <div class="sign-in-txt">Sign in</div>
+                    <div class="use-links">Sign in using</div>
+                    <div class="sign-using">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <form method="post">
+                    <div class="alter">Or use your account</div>
+                    <input type="text" placeholder="Username" id="username" name="username">
+                    <input type="password" placeholder="password" id="password" name="password">
+                    <button class="panel-login" onclick="vali()">SIGN IN</button>
+                    <div class="forgot">Forgot Password?</div></form>
+                </div>
+                <div class="login-right">
+                    <div class="panel-logo">
+                        <img src="logo.png" alt="">
+                    </div>
+                    <div class="welcome">
+                        Welcome Gamer!<br> A new world of gaming awaits you.
+                    </div>
+                    <div class="new-user">
+                        New to Radiant?
+                    </div>
+                    <button class="rgstr-btn" onclick="rgstrButton()">
+                        SIGN UP
+                    </button>
+                </div>
+            </div>
+            <div class="register-sect">
+                <div class="login-right">
+                    <div class="panel-logo">
+                        <img src="logo.png" alt="">
+                    </div>
+                    <div class="welcome">
+                        Welcome Gamer!<br> A new world of gaming awaits you.
+                    </div>
+                    <div class="new-user">
+                        Already a member?
+                    </div>
+                    <button class="rgstr-btn" onclick='loginButton()'>
+                        LOG IN
+                    </button>
+                    
+                </div>
+                <div class="login-left">
+                    <div class="sign-in-txt">Sign Up</div>
+                    <div class="use-links">Sign up using</div>
+                    <div class="sign-using">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <form action="connect.php" method="post">
+                    <div class="alter">Or create an account</div>
+                    <input type="text" placeholder="Name" name="name">
+                    <input type="email" placeholder="Email id" name="email">
+                    <input type="text" placeholder="Username" name="username">
+                    <input type="password" placeholder="password" name="password">
+                    <input type="submit">
+                    <button class="panel-login">SIGN UP</button></form>
+                    <!-- <div class="forgot">Forgot Password?</div> -->
+                </div>
+            </div></form>
+        </div>
+    </div>
+    <script src="js/login-signup-script.js"></script>
+    <script src="js/category-script.js"></script>
+    <!-- <script src="js/validate.js"></script> -->
+</body>
+
+</html>
