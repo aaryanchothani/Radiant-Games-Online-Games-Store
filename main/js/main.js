@@ -1,0 +1,41 @@
+let activeIndex = 0;
+
+const groups = document.getElementsByClassName("frame");
+
+const handleRightClick = () => {
+  const nextIndex = activeIndex + 1 <= groups.length - 1 ? activeIndex + 1 : 0;
+  
+  const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
+        nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
+  currentGroup.dataset.status = "after";
+  
+  nextGroup.dataset.status = "becoming-active-from-before";
+  
+  setTimeout(() => {
+    nextGroup.dataset.status = "active";
+    activeIndex = nextIndex;
+  });
+}
+
+const handleLeftClick = () => {
+  const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : groups.length - 1;
+  
+  const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
+        nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
+  
+  currentGroup.dataset.status = "before";
+  
+  nextGroup.dataset.status = "becoming-active-from-after";
+  
+  setTimeout(() => {
+    nextGroup.dataset.status = "active";
+    activeIndex = nextIndex;
+  });
+}
+window.setInterval(handleRightClick, 10000);
+
+function scrolls(){ 
+  // window.scroll(0, 2000);
+  // document.getElementsByTagName('body').style.scroll-behavior='smooth';
+  document.documentElement.scrollTop = 750;
+}
