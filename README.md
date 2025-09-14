@@ -19,19 +19,44 @@ Radiant Games is a **web-based platform** for browsing, buying, and learning mor
 ---
 
 ## 📂 Project Structure
+# 🎮 Radiant Games – Online Games Store
+
+## 📌 About
+Radiant Games is a **web-based platform** for browsing, buying, and learning more about popular, new, and fun video games — all under one roof.  
+
+- Quickly **search** for games across multiple genres.  
+- **Read details** about each game before making a choice.  
+- **Purchase games** with a smooth checkout process.  
+- Maintain a **wishlist** and manage your **library** easily.  
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** PHP, XAMPP (MySQL for database)  
+- **Data:** Games data stored in `.xlsx` and `.csv` files  
+- **Additional Assets:** Images, screenshots, and videos for UI/UX support  
+
+---
+
+## 📂 Project Structure
+```text
 ├── gamesRadiant.xlsx          # Dataset (Excel)
 ├── gamesRadiantcsv.csv        # Dataset (CSV)
 │
 ├── about/                     # About page
 │   ├── about.html
 │   ├── logo.png
-│   ├── css/about.css
-│   └── images/bg.png
+│   ├── css/
+│   │   └── about.css
+│   └── images/
+│       └── bg.png
 │
 ├── main/                      # Main application
 │   ├── main.html
 │   ├── connect.php
-│   ├── css/main.css
+│   ├── css/
+│   │   └── main.css
 │   ├── js/                    # JS scripts
 │   ├── images/                # Game assets
 │   ├── videos/                # Demo videos
