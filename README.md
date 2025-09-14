@@ -19,29 +19,27 @@ Radiant Games is a **web-based platform** for browsing, buying, and learning mor
 ---
 
 ## 📂 Project Structure
+├── gamesRadiant.xlsx          # Dataset (Excel)
+├── gamesRadiantcsv.csv        # Dataset (CSV)
+│
+├── about/                     # About page
+│   ├── about.html
+│   ├── logo.png
+│   ├── css/about.css
+│   └── images/bg.png
+│
+├── main/                      # Main application
+│   ├── main.html
+│   ├── connect.php
+│   ├── css/main.css
+│   ├── js/                    # JS scripts
+│   ├── images/                # Game assets
+│   ├── videos/                # Demo videos
+│   └── sample/                # Sample files
+│
+├── Images_screenshots/        # Project screenshots & diagrams
+└── Presentations/             # Presentations & charts
 
-C:.
-├── gamesRadiant.xlsx # Dataset (Excel)
-├── gamesRadiantcsv.csv # Dataset (CSV)
-│
-├── about/ # About page
-│ ├── about.html
-│ ├── logo.png
-│ ├── css/about.css
-│ └── images/bg.png
-│
-├── main/ # Main application
-│ ├── main.html
-│ ├── connect.php
-│ ├── css/main.css
-│ ├── js/ # JS scripts (login, validation, categories)
-│ ├── images/ # Game assets & backgrounds
-│ ├── videos/ # Demo videos (game trailers, UI flow)
-│ └── sample/ # Sample demo files
-│
-├── Images_screenshots/ # Project screenshots & diagrams
-│
-└── Presentations/ # Project presentations & charts
 
 ## 🚀 Features
 - 🔎 **Browse Games** by categories (Action, Adventure, Sports, etc.)  
@@ -62,3 +60,15 @@ Here are some previews of the project:
 ![Checkout](Images_screenshots/checkout.png)  
 ![Wishlist](Images_screenshots/wishlist.png)  
 ![Library](Images_screenshots/library.png)  
+
+## 📦 Installation & Setup
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/aaryanchothani/Radiant-Games-Online-Games-Store
+2. Move the project into your XAMPP htdocs folder.
+
+3. Start Apache and MySQL in XAMPP.
+
+4. Import the game dataset (gamesRadiant.xlsx or gamesRadiantcsv.csv) into MySQL.
+
+5. Open http://localhost/main/main.html in your browser.
