@@ -64,8 +64,8 @@ Radiant Games is a **web-based platform** for browsing, buying, and learning mor
 │
 ├── Images_screenshots/        # Project screenshots & diagrams
 └── Presentations/             # Presentations & charts
-```
 
+---
 ## 🚀 Features
 - 🔎 **Browse Games** by categories (Action, Adventure, Sports, etc.)  
 - 📝 **Signup/Login** system with validation  
